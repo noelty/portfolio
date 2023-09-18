@@ -1,0 +1,114 @@
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+ul,ol{
+  list-style-type: none;
+  padding: 0;
+}
+
+:root {
+  --color-background: hsl(0, 0%, 100%);
+  --color-primary: hsl(0, 0%, 0%);
+  --color-secondary-shade-1: hsl(0, 0%, 33%);
+  --color-secondary-shade-2: hsl(0, 0%, 50%);
+  --fs-body: 1rem;
+  --fs-sm-h1: 2rem;
+  --fs-lg-h1: 3rem;
+  --fs-sm-h3: 1.17rem;
+  --fs-lg-h3: 1.17rem;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: "poppins",sans-serif;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+}
+
+p{
+  font-size: var(--fs-body);
+  color: var(--color-secondary-shade-2);
+}
+h1{
+  font-size: var(--fs-sm-h1);
+}
+h3{
+  font-size: var(--fs-sm-h3)
+}
+/* hero section */
+
+.hero-description {
+  padding: 0 2em;
+}
+
+/* profile */
+
+
+/* experience */
+
+.exp-card {
+  padding: 0 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  margin-inline: auto;
+}
+
+@media (max-width: 31.25em){
+  .exp-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-inline: auto;
+  }
+}
+
+/* contact section */
+
+.link-list {
+  display: flex;
+  gap: 1em;
+}
+.link > a > img {
+  width: 1.6em;
+}
